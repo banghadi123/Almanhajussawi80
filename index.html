@@ -174,28 +174,30 @@ footer {
 </head>
 <body>
  <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
   <div class="container-fluid">
-    <a class="navbar-brand d-flex align-items-center" href="#" style="margin-left: 0;">
-      <div class="d-flex flex-column">
-        <span style="font-weight: bold; font-size: 1.6rem; color: #ffffff;">YAYASAN ALMANHAJUSSAWI DHIYAU NUSANTARA.</span>
-        <small style="font-size: 1.2rem; color: #ffffff;">KEMENKUMHAM NO : AHU-0021398.AH.01.04.TAHUN 2022</small>
-      </div>
+    <!-- Brand / Logo -->
+    <a class="navbar-brand d-flex flex-column" href="#">
+      <span class="fw-bold" style="font-size: 1rem;">YAYASAN ALMANHAJUSSAWI DHIYAU NUSANTARA</span>
+      <small style="font-size: 0.75rem;">KEMENKUMHAM NO: AHU-0021398.AH.01.04.TAHUN 2022</small>
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="Toggle navigation">
 
+    <!-- Toggle Button for Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <!-- Collapsible Menu -->
     <div class="collapse navbar-collapse" id="mainNavbar">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-        <li class="nav-iatem"><a class="nav-link" href="profile.html">Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="profile.html">Profil</a></li>
         <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
-        <li class="nav-item"><a class="nav-link" href="portofolio.html">portofolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
 
-        <!-- Dropdown Data -->
+        <!-- Dropdown: Data -->
         <li class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle" href="#" id="dataDropdownDATA" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="dataDropdownDATA" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Data
           </a>
           <ul class="dropdown-menu" aria-labelledby="dataDropdownDATA">
@@ -203,24 +205,26 @@ footer {
             <li><a class="dropdown-item" href="isya.html">Isya</a></li>
           </ul>
         </li>
-        <!-- Dropdown Data -->
+
+        <!-- Dropdown: Bidang -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dataDropdownBIDANG" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            bidang
+            Bidang
           </a>
           <ul class="dropdown-menu" aria-labelledby="dataDropdownBIDANG">
-            <li><a class="dropdown-item" href="tim media.html">tim media</a></li>
-            <li><a class="dropdown-item" href="#"></a></li>
+            <li><a class="dropdown-item" href="tim media.html">Tim Media</a></li>
+            <li><a class="dropdown-item" href="#">Lainnya</a></li>
           </ul>
         </li>
-        <!-- Dropdown Data -->
+
+        <!-- Dropdown: Kegiatan -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dataDropdownKEGIATAN" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            kegiatan
+            Kegiatan
           </a>
           <ul class="dropdown-menu" aria-labelledby="dataDropdownKEGIATAN">
-            <li><a class="dropdown-item" href="sosial.html">sosial</a></li>
-            <li><a class="dropdown-item" href="#"></a></li>
+            <li><a class="dropdown-item" href="sosial.html">Sosial</a></li>
+            <li><a class="dropdown-item" href="#">Lainnya</a></li>
           </ul>
         </li>
 
@@ -229,6 +233,7 @@ footer {
     </div>
   </div>
 </nav>
+
   <!-- Hero Section -->
  <main>
   <section class="hero">
