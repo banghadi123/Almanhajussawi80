@@ -17,14 +17,8 @@
 
 /* Navbar Hijau Tua */
 .navbar-custom {
-  background-color: #04630c;
-  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1); /* Dari kiri */
-  width: 250px;
-  z-index: 1030;
-}
-
-body {
-  padding-left: 250px; /* Biar konten nggak ketutup navbar kiri */
+  background-color: #000000; /* Navbar atas: hitam */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand,
@@ -36,23 +30,27 @@ body {
   color: #d1fae5 !important;
 }
 
-.dropdown-menu {
-  background-color: #04630c;
+.offcanvas {
+  background-color: #000000; /* Sidebar: hitam */
 }
 
-.dropdown-item {
-  color: #ffffff;
+.offcanvas .nav-link {
+  color: white;
+  font-size: 1.1rem;
 }
 
-.dropdown-item:hover {
-  background-color: #034f0a;
+.offcanvas .nav-link:hover {
   color: #d1fae5;
+}
+
+.offcanvas-header .btn-close {
+  filter: invert(1); /* Biar tombol 'x' kelihatan di background gelap */
 }
 
 /* Hero Hijau Tua */
 .hero {
   background-color: #04630c;
-  background: linear-gradient(to right, #14532d, #b0b306);
+  background: linear-gradient(to right, #2695a3, #79ca64);
   padding: 100px 20px;
   text-align: center;
 }
@@ -177,56 +175,100 @@ footer {
       transform: translateX(-100%);
     }
   }
+  /* Navbar lebih tinggi dan tetap hitam */
+.navbar-custom {
+  background-color: #000000;
+  padding-top: 0.5rem;
+  padding-bottom: 0.7rem;
+  min-height: 70px; /* menambah tinggi navbar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Container teks berjalan */
+.marquee-horizontal-container {
+  overflow: hidden;
+  flex: 1;
+  position: relative;
+  height: 2.5em; /* cukup untuk 2 baris */
+  line-height: 1.2;
+}
+
+/* Teks berjalan dua baris */
+.marquee-horizontal-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollLeft 12s linear infinite;
+  padding-left: 100%; /* Mulai dari kanan */
+}
+
+/* Setiap baris teks */
+.marquee-horizontal-text > div {
+  display: block;
+}
+
+/* Animasi scroll kiri */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 </style>
 </head>
 <body>
  <!-- Navbar -->
-<!-- Sidebar Navbar -->
-<nav class="navbar navbar-expand-lg navbar-custom flex-column align-items-start vh-100 position-fixed start-0 top-0 p-3">
-  <a class="navbar-brand mb-4" href="#">YAYASAN</a>
+<!-- Tombol Toggle Sidebar -->
+<nav class="navbar navbar-custom fixed-top">
+  <div class="container-fluid d-flex align-items-center">
+    <!-- Tombol Sidebar -->
+    <button class="btn btn-outline-light me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
+      ☰
+    </button>
 
-  <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <!-- Marquee horizontal: dua baris -->
+    <div class="marquee-horizontal-container">
+      <div class="marquee-horizontal-text">
+        <div class="fw-bold text-white">
+          YAYASAN ALMANHAJUSSAWI DHIYAU NUSANTARA.
+        </div>
+        <div class="small text-danger">
+          KEMENKUMHAM NO : AHU-0021398.AH.01.04.TAHUN 2022
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
 
-  <div class="collapse navbar-collapse w-100" id="mainNavbar">
-    <ul class="navbar-nav flex-column w-100">
+<!-- Sidebar Offcanvas -->
+<div class="offcanvas offcanvas-start text-white" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="sidebarMenuLabel">Menu</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav flex-column">
       <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
       <li class="nav-item"><a class="nav-link" href="profile.html">Profil</a></li>
       <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
       <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
 
-      <!-- Dropdown: Data -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dataDropdownDATA" role="button" data-bs-toggle="dropdown" aria-expanded="false">Data</a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="maghrib.html">Maghrib</a></li>
-          <li><a class="dropdown-item" href="isya.html">Isya</a></li>
-        </ul>
-      </li>
+      <!-- Dropdown Data -->
+      <li class="nav-item"><a class="nav-link" href="maghrib.html">Maghrib</a></li>
+      <li class="nav-item"><a class="nav-link" href="isya.html">Isya</a></li>
 
-      <!-- Dropdown: Bidang -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dataDropdownBIDANG" role="button" data-bs-toggle="dropdown" aria-expanded="false">Bidang</a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="tim media.html">Tim Media</a></li>
-          <li><a class="dropdown-item" href="#">Lainnya</a></li>
-        </ul>
-      </li>
+      <!-- Dropdown Bidang -->
+      <li class="nav-item"><a class="nav-link" href="tim media.html">Tim Media</a></li>
 
-      <!-- Dropdown: Kegiatan -->
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dataDropdownKEGIATAN" role="button" data-bs-toggle="dropdown" aria-expanded="false">Kegiatan</a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="sosial.html">Sosial</a></li>
-          <li><a class="dropdown-item" href="#">Lainnya</a></li>
-        </ul>
-      </li>
+      <!-- Dropdown Kegiatan -->
+      <li class="nav-item"><a class="nav-link" href="sosial.html">Sosial</a></li>
 
       <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
     </ul>
   </div>
-</nav>
+</div>
 
   <!-- Hero Section -->
  <main>
