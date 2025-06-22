@@ -16,7 +16,7 @@
 
 /* Navbar Hijau Tua */
 .navbar-custom {
-  background-color: #04630c;
+  background-color: #000000; /* Navbar atas: hitam */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -29,10 +29,27 @@
   color: #d1fae5 !important;
 }
 
+.offcanvas {
+  background-color: #000000; /* Sidebar: hitam */
+}
+
+.offcanvas .nav-link {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.offcanvas .nav-link:hover {
+  color: #d1fae5;
+}
+
+.offcanvas-header .btn-close {
+  filter: invert(1); /* Biar tombol 'x' kelihatan di background gelap */
+}
+
 /* Hero Hijau Tua */
 .hero {
   background-color: #04630c;
-  background: linear-gradient(to right, #14532d, #b0b306);
+  background: linear-gradient(to right, #2695a3, #79ca64);
   padding: 100px 20px;
   text-align: center;
 }
@@ -82,70 +99,177 @@ footer {
   50% { transform: translateY(-20px) rotate(10deg); }
   100% { transform: translateY(0px) rotate(0deg); }
 }
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+  }
 
+  .map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+#typed-extra-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f0f0f0;
+}
+#typed-paragraph {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #f0f0f0;
+}
+/* Animasi Fade In */
+  .animated {
+    animation: fadeInUp 1s ease-in-out;
+  }
 
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .responsive-logo {
+  max-width: 250px;
+}
 
-  </style>
+@media (max-width: 768px) {
+  .responsive-logo {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .responsive-logo {
+    max-width: 150px;
+  }
+}
+.running-text-container {
+    width: 100%;
+    overflow: hidden;
+    background: #37883d; /* bisa diganti sesuai tema */
+    white-space: nowrap;
+  }
+
+  .running-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 30s linear infinite;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  /* Navbar lebih tinggi dan tetap hitam */
+.navbar-custom {
+  background-color: #000000;
+  padding-top: 0.5rem;
+  padding-bottom: 0.7rem;
+  min-height: 70px; /* menambah tinggi navbar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Container teks berjalan */
+.marquee-horizontal-container {
+  overflow: hidden;
+  flex: 1;
+  position: relative;
+  height: 2.5em; /* cukup untuk 2 baris */
+  line-height: 1.2;
+}
+
+/* Teks berjalan dua baris */
+.marquee-horizontal-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollLeft 12s linear infinite;
+  padding-left: 100%; /* Mulai dari kanan */
+}
+
+/* Setiap baris teks */
+.marquee-horizontal-text > div {
+  display: block;
+}
+
+/* Animasi scroll kiri */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+</style>
 </head>
+<body>
  <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-  <div class="container-fluid">
-    <a class="navbar-brand d-flex align-items-center" href="#" style="margin-left: 0;">
-      <div class="d-flex flex-column">
-        <span style="font-weight: bold; font-size: 1.6rem; color: #ffffff;">YAYASAN ALMANHAJUSSAWI DHIYAU NUSANTARA.</span>
-        <small style="font-size: 1.2rem; color: #ffffff;">KEMENKUMHAM NO : AHU-0021398.AH.01.04.TAHUN 2022</small>
-      </div>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="Toggle navigation">
-
-      <span class="navbar-toggler-icon"></span>
+<!-- Tombol Toggle Sidebar -->
+<nav class="navbar navbar-custom fixed-top">
+  <div class="container-fluid d-flex align-items-center">
+    <!-- Tombol Sidebar -->
+    <button class="btn btn-outline-light me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
+      ☰
     </button>
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
-        <li class="nav-iatem"><a class="nav-link" href="profile.html">Profile</a></li>
-        <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
-        <li class="nav-item"><a class="nav-link" href="portofolio.html">portofolio</a></li>
 
-        <!-- Dropdown Data -->
-        <li class="nav-item dropdown">
-         <a class="nav-link dropdown-toggle" href="#" id="dataDropdownDATA" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Data
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="dataDropdownDATA">
-            <li><a class="dropdown-item" href="maghrib.html">Maghrib</a></li>
-            <li><a class="dropdown-item" href="isya.html">Isya</a></li>
-          </ul>
-        </li>
-        <!-- Dropdown Data -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dataDropdownBIDANG" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            bidang
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="dataDropdownBIDANG">
-            <li><a class="dropdown-item" href="tim media.html">tim media</a></li>
-            <li><a class="dropdown-item" href="#"></a></li>
-          </ul>
-        </li>
-        <!-- Dropdown Data -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dataDropdownKEGIATAN" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            kegiatan
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="dataDropdownKEGIATAN">
-            <li><a class="dropdown-item" href="sosial.html">sosial</a></li>
-            <li><a class="dropdown-item" href="#"></a></li>
-          </ul>
-        </li>
-
-        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
-      </ul>
+    <!-- Marquee horizontal: dua baris -->
+    <div class="marquee-horizontal-container">
+      <div class="marquee-horizontal-text">
+        <div class="fw-bold text-white">
+          YAYASAN ALMANHAJUSSAWI DHIYAU NUSANTARA.
+        </div>
+        <div class="small text-danger">
+          KEMENKUMHAM NO : AHU-0021398.AH.01.04.TAHUN 2022
+        </div>
+      </div>
     </div>
   </div>
 </nav>
+<div class="offcanvas offcanvas-start text-white" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="sidebarMenuLabel">Menu</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
 
+  <div class="offcanvas-body">
+    <ul class="navbar-nav flex-column">
+      <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+      <li class="nav-item"><a class="nav-link" href="profile.html">Profil</a></li>
+      <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+      <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
 
+      <!-- Dropdown Data -->
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="#collapseData" role="button" aria-expanded="false" aria-controls="collapseData">
+          Data ▾
+        </a>
+        <div class="collapse" id="collapseData">
+          <ul class="nav flex-column ms-3">
+            <li class="nav-item"><a class="nav-link" href="maghrib.html">Maghrib</a></li>
+            <li class="nav-item"><a class="nav-link" href="isya.html">Isya</a></li>
+          </ul>
+        </div>
+      </li>
 
+      <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+    </ul>
+  </div>
+</div>
 
   <!-- Konten Utama -->
 <main>
