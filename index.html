@@ -241,13 +241,12 @@ footer {
     </div>
   </div>
 </nav>
-
-<!-- Sidebar Offcanvas -->
 <div class="offcanvas offcanvas-start text-white" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="sidebarMenuLabel">Menu</h5>
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
   </div>
+
   <div class="offcanvas-body">
     <ul class="navbar-nav flex-column">
       <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
@@ -256,19 +255,23 @@ footer {
       <li class="nav-item"><a class="nav-link" href="portofolio.html">Portofolio</a></li>
 
       <!-- Dropdown Data -->
-      <li class="nav-item"><a class="nav-link" href="maghrib.html">Maghrib</a></li>
-      <li class="nav-item"><a class="nav-link" href="isya.html">Isya</a></li>
-
-      <!-- Dropdown Bidang -->
-      <li class="nav-item"><a class="nav-link" href="tim media.html">Tim Media</a></li>
-
-      <!-- Dropdown Kegiatan -->
-      <li class="nav-item"><a class="nav-link" href="sosial.html">Sosial</a></li>
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="#collapseData" role="button" aria-expanded="false" aria-controls="collapseData">
+          Data ▾
+        </a>
+        <div class="collapse" id="collapseData">
+          <ul class="nav flex-column ms-3">
+            <li class="nav-item"><a class="nav-link" href="maghrib.html">Maghrib</a></li>
+            <li class="nav-item"><a class="nav-link" href="isya.html">Isya</a></li>
+          </ul>
+        </div>
+      </li>
 
       <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
     </ul>
   </div>
 </div>
+
 
   <!-- Hero Section -->
  <main>
