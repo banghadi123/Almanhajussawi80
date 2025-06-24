@@ -176,7 +176,7 @@ footer {
   }
   /* Navbar lebih tinggi dan tetap hitam */
 .navbar-custom {
-  background-color: #000000;
+  background-color: #ffffff;
   padding-top: 0.5rem;
   padding-bottom: 0.7rem;
   min-height: 70px; /* menambah tinggi navbar */
@@ -223,17 +223,20 @@ footer {
 <nav class="navbar navbar-custom fixed-top">
   <div class="container-fluid d-flex align-items-center">
     <!-- Tombol Sidebar -->
-    <button class="btn btn-outline-light me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
-      ☰
-    </button>
+    <button class="btn me-3" style="background-color: black; color: white;" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
+  ☰
+</button>
+
 
     <!-- Marquee horizontal: dua baris -->
+     
+    <img src="img/yayasan.png" alt="Logo Yayasan" style="height: 40px; margin-right: 10px;" />
     <div class="marquee-horizontal-container">
       <div class="marquee-horizontal-text">
-        <div class="fw-bold text-white">
-          YAYASAN ALMANHAJUSSAWI DHIYAU NUSANTARA.
-        </div>
-        <div class="small text-danger">
+      <div class="fw-bold text-dark">
+       YAYASAN ALMANHAJUSSAWI DHIYAU NUSANTARA.
+     </div>
+        <div class="small" style="color: black;">
           KEMENKUMHAM NO : AHU-0021398.AH.01.04.TAHUN 2022
         </div>
       </div>
@@ -271,85 +274,42 @@ footer {
   </div>
 </div>
 
-  <!-- Card 4: Bawah Tengah -->
-   <main>
-   </main>
-  <main class="container my-5">
-  <h1 class="text-center mt-5 pt-5 fade-in-up">Sub Yayasan</h1>
+  <!-- Kontak Sosial Media -->
+<main class="container my-5">
+  <h2 class="text-center mt-5 pt-5 fade-in-up">Sub Yayasan</h2>
 
   <div class="d-flex justify-content-center">
-    <div class="card shadow-lg border-0 rounded-4 p-3 bg-success text-white" style="width: 100%; max-width: 500px; animation: floatCard 2s ease-in-out;">
+    <div class="card shadow-lg border-0 rounded-4 p-4 bg-success text-white" style="width: 100%; max-width: 600px;">
       <div class="card-body text-center">
-        <h5 class="card-title mb-3">Ikuti Kami di Media Sosial</h5>
-        <p class="mb-4">Tetap terhubung dengan aktivitas kami melalui platform berikut:</p>
-        <div class="d-flex justify-content-around fs-4">
-          <a href="https://instagram.com/kongkowams_" target="_blank" class="text-white text-decoration-none">
-            <p></p>
-            <i class="fab fa-instagram"></i>
+        <h5 class="card-title mb-3 fs-5">Hubungi Kami</h5>
+        <p class="mb-4 fs-6">Tetap terhubung dan ikuti aktivitas kami melalui:</p>
+
+        <!-- Ikon Media Sosial -->
+        <div class="d-flex justify-content-center gap-4 mb-4">
+          <a href="https://instagram.com/kongkowams_" target="_blank" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+            <i class="fab fa-instagram fs-4"></i>
           </a>
-          <a href="https://youtube.com/@kongkowams_" target="_blank" class="text-white text-decoration-none">
-            <i class="fab fa-youtube"></i>
+          <a href="https://youtube.com/@kongkowams_" target="_blank" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+            <i class="fab fa-youtube fs-4"></i>
           </a>
-          <a href="https://tiktok.com/@kongkowams_" target="_blank" class="text-white text-decoration-none">
-            <i class="fab fa-tiktok"></i>
+          <a href="https://tiktok.com/@kongkowams_" target="_blank" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+            <i class="fab fa-tiktok fs-4"></i>
           </a>
         </div>
-      </div>
-    </div>
-  </div>
-</main>
 
+        <!-- Kontak Langsung -->
+        <div class="text-start px-3 fs-6">
+          <p><i class="fas fa-phone-alt me-2"></i> <a href="https://wa.me/6281234567890" class="text-white text-decoration-none">+62 812-3456-7890</a></p>
+          <p><i class="fas fa-envelope me-2"></i> <a href="mailto:info@kongkowams.org" class="text-white text-decoration-none">info@kongkowams.org</a></p>
+          <p><i class="fas fa-map-marker-alt me-2"></i> Jl. Pendidikan No. 99, Bandung, Indonesia</p>
+        </div>
 <style>
-@keyframes floatCard {
-  0% { transform: translateY(20px); opacity: 0; }
-  100% { transform: translateY(0); opacity: 1; }
+.btn-outline-light:hover {
+  background-color: white !important;
+  color: #198754 !important;
+  transition: 0.3s ease;
 }
 </style>
->
-
-
-  <!-- Footer -->
-  <footer>
-  <marquee behavior="scroll" direction="left">
-    <i class="fab fa-tiktok" style="color: #000000;"></i>
-    <span style="color: #000000;"> Tiktok: kongkowams_ </span>
-    
-    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; 
-
-    <i class="fab fa-instagram" style="color: #db0a9d;"></i>
-    <span style="color: #db0a9d;"> Instagram: kongkowams_</span>
-
-    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; 
-
-    <i class="fab fa-youtube" style="color: #FF0000;"></i>
-    <span style="color: #FF0000;"> Youtube: kongkowams_ </span>
-
-    &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; 
-
-   <span style="color: #000000;">BERGERAK BERSAMA. WUJUDKAN HARAPAN LEWAT BANK MANDIRI 1660-0061-70021 KODE BANK 008 A/N ALMANHAJUSSAWI DHIYAU</span>
-
-   &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; 
-
-</footer>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll(".fade-in-up");
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("appear");
-          observer.unobserve(entry.target); // hanya muncul sekali
-        }
-      });
-    }, {
-      threshold: 0.1
-    });
-
-    elements.forEach(el => observer.observe(el));
-  });
-</script>
-
 </body>
 </html>
 
