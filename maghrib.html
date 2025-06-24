@@ -176,7 +176,7 @@ footer {
   }
   /* Navbar lebih tinggi dan tetap hitam */
 .navbar-custom {
-  background-color: #000000;
+  background-color: #ffffff;
   padding-top: 0.5rem;
   padding-bottom: 0.7rem;
   min-height: 70px; /* menambah tinggi navbar */
@@ -214,6 +214,14 @@ footer {
     transform: translateX(-100%);
   }
 }
+.card-title {
+  font-weight: 600;
+}
+.card-text {
+  font-size: 0.95rem;
+}
+</style>
+
 
 </style>
 </head>
@@ -223,17 +231,19 @@ footer {
 <nav class="navbar navbar-custom fixed-top">
   <div class="container-fluid d-flex align-items-center">
     <!-- Tombol Sidebar -->
-    <button class="btn btn-outline-light me-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
-      ☰
-    </button>
+    <button class="btn me-3" style="background-color: black; color: white;" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu">
+  ☰
+</button>
+
 
     <!-- Marquee horizontal: dua baris -->
+    <img src="img/yayasan.png" alt="Logo Yayasan" style="height: 40px; margin-right: 10px;" />
     <div class="marquee-horizontal-container">
       <div class="marquee-horizontal-text">
-        <div class="fw-bold text-white">
-          YAYASAN ALMANHAJUSSAWI DHIYAU NUSANTARA.
-        </div>
-        <div class="small text-danger">
+      <div class="fw-bold text-dark">
+       YAYASAN ALMANHAJUSSAWI DHIYAU NUSANTARA.
+     </div>
+        <div class="small" style="color: black;">
           KEMENKUMHAM NO : AHU-0021398.AH.01.04.TAHUN 2022
         </div>
       </div>
@@ -272,112 +282,67 @@ footer {
 </div>
 
   <!-- Konten Utama -->
-<main>
 <main class="container mt-5 pt-5">
-  <!-- Judul -->
   <h2 class="text-center mb-4 fw-bold text-success">Part of Kongkow</h2>
 
-  <!-- Carousel -->
   <div id="kongkowCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
 
       <!-- Slide 1 -->
       <div class="carousel-item active">
-        <div class="row">
-          <!-- 3 Cards -->
+        <div class="row g-4">
+          <!-- Card 1 -->
           <div class="col-md-4">
-            <div class="card bg-success text-white mb-3">
-              <div class="row g-0 align-items-center">
-                <div class="col-4">
-                  <img src="img/ustadz.jpg" class="img-fluid rounded-start" style="aspect-ratio: 3/4; object-fit: cover;" alt="...">
-                </div>
-                <div class="col-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Judul 1</h5>
-                    <p class="card-text">Deskripsi singkat.</p>
-                  </div>
-                </div>
+            <div class="card h-100 shadow-sm border-0 rounded-4 bg-success text-white">
+              <img src="img/Ustadz H. Waisul Qurni Zainudin.png" class="card-img-top rounded-top-4" alt="Judul 1" style="aspect-ratio: 3/4; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Judul 1</h5>
+                <p class="card-text">Deskripsi singkat mengenai tokoh atau aktivitas yayasan.</p>
               </div>
             </div>
           </div>
 
+          <!-- Card 2 -->
           <div class="col-md-4">
-            <div class="card bg-success text-white mb-3">
-              <div class="row g-0 align-items-center">
-                <div class="col-4">
-                  <img src="img/ustadz.jpg" class="img-fluid rounded-start" style="aspect-ratio: 3/4; object-fit: cover;" alt="...">
-                </div>
-                <div class="col-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Judul 2</h5>
-                    <p class="card-text">Deskripsi singkat.</p>
-                  </div>
-                </div>
+            <div class="card h-100 shadow-sm border-0 rounded-4 bg-success text-white">
+              <img src="img/ustadz.jpg" class="card-img-top rounded-top-4" alt="Judul 2" style="aspect-ratio: 3/4; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Judul 2</h5>
+                <p class="card-text">Deskripsi singkat mengenai tokoh atau aktivitas yayasan.</p>
               </div>
             </div>
           </div>
 
+          <!-- Card 3 -->
           <div class="col-md-4">
-            <div class="card bg-success text-white mb-3">
-              <div class="row g-0 align-items-center">
-                <div class="col-4">
-                  <img src="img/ustadz.jpg" class="img-fluid rounded-start" style="aspect-ratio: 3/4; object-fit: cover;" alt="...">
-                </div>
-                <div class="col-8">
-                  <div class="card-body">
-                    <h5 class="card-title">Judul 3</h5>
-                    <p class="card-text">Deskripsi singkat.</p>
-                  </div>
-                </div>
+            <div class="card h-100 shadow-sm border-0 rounded-4 bg-success text-white">
+              <img src="img/ustadz.jpg" class="card-img-top rounded-top-4" alt="Judul 3" style="aspect-ratio: 3/4; object-fit: cover;">
+              <div class="card-body">
+                <h5 class="card-title">Judul 3</h5>
+                <p class="card-text">Deskripsi singkat mengenai tokoh atau aktivitas yayasan.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Slide 2 -->
-      <div class="carousel-item">
-        <div class="row">
-          <!-- 3 Cards lagi -->
-          <!-- Copy card seperti di atas dan ganti Judul 4,5,6 -->
-          <!-- ... -->
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="carousel-item">
-        <div class="row">
-          <!-- 3 Cards lagi -->
-          <!-- Copy card seperti di atas dan ganti Judul 7,8,9 -->
-          <!-- ... -->
-        </div>
-      </div>
-
-      <!-- Slide 4 -->
-      <div class="carousel-item">
-        <div class="row">
-          <!-- 3 Cards lagi -->
-          <!-- Copy card seperti di atas dan ganti Judul 10,11,12 -->
-          <!-- ... -->
-        </div>
-      </div>
+      <!-- Tambah Slide 2, 3, dst. sesuai kebutuhan -->
 
     </div>
 
-    <!-- Carousel Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#kongkowCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#kongkowCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+    <!-- Navigasi Carousel -->
+    <div class="d-flex justify-content-center mt-4 gap-3">
+      <button class="btn btn-dark rounded-circle" type="button" data-bs-target="#kongkowCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="btn btn-dark rounded-circle" type="button" data-bs-target="#kongkowCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
   </div>
 </main>
-
-</main>
-
 
   <!-- Footer -->
   <footer>
