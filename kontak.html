@@ -274,17 +274,64 @@ footer {
   </div>
 </div>
 
-  <!-- Kontak Sosial Media -->
 <main class="container my-5">
+
   <h2 class="text-center mt-5 pt-5 fade-in-up">Sub Yayasan</h2>
 
+  <!-- PEWUJUD HARAPAN -->
+  <div class="card shadow mb-5">
+    <div class="card-header bg-success text-white text-center fs-5">
+      <strong> Pewujud Harapan </strong>
+    </div>
+    <div class="card-body p-0">
+      <table class="table table-striped mb-0 text-center align-middle">
+        <thead class="table-success">
+          <tr>
+            <th style="width: 10%;">No</th>
+            <th>Nama Donatur</th>
+            <th>Kota</th>
+            <th>Donasi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Donatur Tetap Tampil -->
+          <tr><td>1</td><td>Ahmad Fauzi</td><td>Bandung</td><td>Rp 200.000</td></tr>
+          <tr><td>2</td><td>Siti Nurhaliza</td><td>Tangerang</td><td>Rp 500.000</td></tr>
+          <tr><td>3</td><td>Hamba Allah</td><td>Jakarta</td><td>Rp 1.000.000</td></tr>
+          <tr><td>4</td><td>Muhammad Rizki</td><td>Yogyakarta</td><td>Rp 250.000</td></tr>
+          <tr><td>5</td><td>Tanpa Nama</td><td>Surabaya</td><td>Rp 100.000</td></tr>
+
+          <!-- Donatur Tersembunyi -->
+          <tbody id="moreDonors" class="collapse">
+            <tr><td>6</td><td>Fulanah</td><td>Bekasi</td><td>Rp 150.000</td></tr>
+            <tr><td>7</td><td>Hamba Allah</td><td>Cirebon</td><td>Rp 300.000</td></tr>
+            <tr><td>8</td><td>Rina Wulandari</td><td>Semarang</td><td>Rp 400.000</td></tr>
+            <tr><td>9</td><td>Bapak Dermawan</td><td>Depok</td><td>Rp 750.000</td></tr>
+            <tr><td>10</td><td>Anonim</td><td>Solo</td><td>Rp 50.000</td></tr>
+          </tbody>
+        </tbody>
+      </table>
+
+      <!-- Tombol Toggle -->
+      <div class="text-center my-3">
+        <button class="btn btn-outline-success" type="button" data-bs-toggle="collapse" data-bs-target="#moreDonors" aria-expanded="false" aria-controls="moreDonors" id="toggleButton">
+          Selengkapnya
+        </button>
+      </div>
+    </div>
+
+    <div class="card-footer text-center bg-light text-success fw-semibold">
+      Terima kasih atas dukungan dalam mewujudkan harapan bersama 🌿
+    </div>
+  </div>
+
+  <!-- KONTAK YAYASAN -->
   <div class="d-flex justify-content-center">
     <div class="card shadow-lg border-0 rounded-4 p-4 bg-success text-white" style="width: 100%; max-width: 600px;">
       <div class="card-body text-center">
         <h5 class="card-title mb-3 fs-5">Hubungi Kami</h5>
         <p class="mb-4 fs-6">Tetap terhubung dan ikuti aktivitas kami melalui:</p>
 
-        <!-- Ikon Media Sosial -->
         <div class="d-flex justify-content-center gap-4 mb-4">
           <a href="https://instagram.com/kongkowams_" target="_blank" class="btn btn-outline-light rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
             <i class="fab fa-instagram fs-4"></i>
@@ -297,19 +344,38 @@ footer {
           </a>
         </div>
 
-        <!-- Kontak Langsung -->
         <div class="text-start px-3 fs-6">
-          <p><i class="fas fa-phone-alt me-2"></i> <a href="https://wa.me/6281234567890" class="text-white text-decoration-none">+62 812-3456-7890</a></p>
-          <p><i class="fas fa-envelope me-2"></i> <a href="mailto:info@kongkowams.org" class="text-white text-decoration-none">info@kongkowams.org</a></p>
-          <p><i class="fas fa-map-marker-alt me-2"></i> Jl. Pendidikan No. 99, Bandung, Indonesia</p>
+          <p><i class="fas fa-phone-alt me-2"></i><a href="https://wa.me/6281234567890" class="text-white text-decoration-none">+62 812-3456-7890</a></p>
+          <p><i class="fas fa-envelope me-2"></i><a href="mailto:info@kongkowams.org" class="text-white text-decoration-none">info@kongkowams.org</a></p>
+          <p><i class="fas fa-map-marker-alt me-2"></i> Jl. Contoh No. 123, Kota Harapan</p>
         </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- STYLE dan SCRIPT -->
 <style>
-.btn-outline-light:hover {
-  background-color: white !important;
-  color: #198754 !important;
-  transition: 0.3s ease;
-}
+  .btn-outline-light:hover {
+    background-color: white !important;
+    color: #198754 !important;
+    transition: 0.3s ease;
+  }
 </style>
+
+<script>
+  const toggleBtn = document.getElementById("toggleButton");
+  const moreDonors = document.getElementById("moreDonors");
+
+  moreDonors.addEventListener("shown.bs.collapse", () => {
+    toggleBtn.innerText = "Tutup";
+  });
+
+  moreDonors.addEventListener("hidden.bs.collapse", () => {
+    toggleBtn.innerText = "Selengkapnya";
+  });
+</script>
+
 </body>
 </html>
 
