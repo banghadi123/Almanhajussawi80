@@ -214,14 +214,6 @@ footer {
     transform: translateX(-100%);
   }
 }
-.card-title {
-  font-weight: 600;
-}
-.card-text {
-  font-size: 0.95rem;
-}
-</style>
-
 
 </style>
 </head>
@@ -237,6 +229,7 @@ footer {
 
 
     <!-- Marquee horizontal: dua baris -->
+     
     <img src="img/yayasan.png" alt="Logo Yayasan" style="height: 40px; margin-right: 10px;" />
     <div class="marquee-horizontal-container">
       <div class="marquee-horizontal-text">
@@ -282,67 +275,173 @@ footer {
 </div>
 
   <!-- Konten Utama -->
-<main class="container mt-5 pt-5">
-  <h2 class="text-center mb-4 fw-bold text-success">Part of Kongkow</h2>
+<main>
+  <main style="padding-top: 80px;">
+<style>
+    body {
+      background-color: #f0fdf4;
+      padding-top: 60px;
+    }
+    .santri-card {
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 100, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+    .santri-card:hover {
+      transform: scale(1.03);
+    }
+    .santri-name {
+      color: #14532d;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .motto {
+      font-style: italic;
+      font-size: 0.95rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+   <div class="container text-center">
+    <h2 class="mb-4 text-success fw-bold">📖 Data Santri Yayasan 📖</h2>
 
-  <div id="kongkowCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
+    <div id="carouselSantri" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
 
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <div class="row g-4">
-          <!-- Card 1 -->
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm border-0 rounded-4 bg-success text-white">
-              <img src="img/Ustadz H. Waisul Qurni Zainudin.png" class="card-img-top rounded-top-4" alt="Judul 1" style="aspect-ratio: 3/4; object-fit: cover;">
-              <div class="card-body">
-                <h5 class="card-title">Judul 1</h5>
-                <p class="card-text">Deskripsi singkat mengenai tokoh atau aktivitas yayasan.</p>
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-md-4 mb-4">
+              <div class="card santri-card p-3">
+                <div class="card-body text-center">
+                  <img src="img/Ustadz H. Waisul Qurni Zainudin.png" class="img-fluid rounded-circle mb-3" style="width:100px;height:100px;object-fit:cover;" alt="Santri 1">
+                  <div class="santri-name">Ahmad Fauzi</div>
+                  <div>Jenjang: MA</div>
+                  <div class="motto">"Belajar untuk menjadi bermanfaat."</div>
+                </div>
               </div>
             </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm border-0 rounded-4 bg-success text-white">
-              <img src="img/ustadz.jpg" class="card-img-top rounded-top-4" alt="Judul 2" style="aspect-ratio: 3/4; object-fit: cover;">
-              <div class="card-body">
-                <h5 class="card-title">Judul 2</h5>
-                <p class="card-text">Deskripsi singkat mengenai tokoh atau aktivitas yayasan.</p>
+            <div class="col-md-4 mb-4">
+              <div class="card santri-card p-3">
+                <div class="card-body text-center">
+                  <img src="img/Habib Salim.png " class="img-fluid rounded-circle mb-3" style="width:100px;height:100px;object-fit:cover;" alt="Santri 2">
+                  <div class="santri-name">Siti Aminah</div>
+                  <div>Jenjang: MTs</div>
+                  <div class="motto">"Ilmu adalah cahaya hati."</div>
+                </div>
               </div>
             </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm border-0 rounded-4 bg-success text-white">
-              <img src="img/ustadz.jpg" class="card-img-top rounded-top-4" alt="Judul 3" style="aspect-ratio: 3/4; object-fit: cover;">
-              <div class="card-body">
-                <h5 class="card-title">Judul 3</h5>
-                <p class="card-text">Deskripsi singkat mengenai tokoh atau aktivitas yayasan.</p>
+            <div class="col-md-4 mb-4">
+              <div class="card santri-card p-3">
+                <div class="card-body text-center">
+                  <img src="img/santri3.jpg" class="img-fluid rounded-circle mb-3" style="width:100px;height:100px;object-fit:cover;" alt="Santri 3">
+                  <div class="santri-name">Muhammad Ihsan</div>
+                  <div>Jenjang: MA</div>
+                  <div class="motto">"Rajin belajar, raih keberkahan."</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card santri-card p-3">
+                <div class="card-body text-center">
+                  <img src="img/santri4.jpg" class="img-fluid rounded-circle mb-3" style="width:100px;height:100px;object-fit:cover;" alt="Santri 4">
+                  <div class="santri-name">Fatimah Zahra</div>
+                  <div>Jenjang: MTs</div>
+                  <div class="motto">"Jadilah cahaya di tengah kegelapan."</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card santri-card p-3">
+                <div class="card-body text-center">
+                  <img src="img/santri5.jpg" class="img-fluid rounded-circle mb-3" style="width:100px;height:100px;object-fit:cover;" alt="Santri 5">
+                  <div class="santri-name">Ali Zain</div>
+                  <div>Jenjang: MA</div>
+                  <div class="motto">"Hafal Qur'an, bahagia dunia akhirat."</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-4 mb-4">
+              <div class="card santri-card p-3">
+                <div class="card-body text-center">
+                  <img src="img/santri6.jpg" class="img-fluid rounded-circle mb-3" style="width:100px;height:100px;object-fit:cover;" alt="Santri 6">
+                  <div class="santri-name">Nur Aisyah</div>
+                  <div>Jenjang: MTs</div>
+                  <div class="motto">"Taat ilmu, taat guru."</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card santri-card p-3">
+                <div class="card-body text-center">
+                  <img src="img/santri7.jpg" class="img-fluid rounded-circle mb-3" style="width:100px;height:100px;object-fit:cover;" alt="Santri 7">
+                  <div class="santri-name">Ali Rizki</div>
+                  <div>Jenjang: MTs</div>
+                  <div class="motto">"Menuntut ilmu sampai liang lahat."</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card santri-card p-3">
+                <div class="card-body text-center">
+                  <img src="img/santri8.jpg" class="img-fluid rounded-circle mb-3" style="width:100px;height:100px;object-fit:cover;" alt="Santri 8">
+                  <div class="santri-name">Zain Santoso</div>
+                  <div>Jenjang: MA</div>
+                  <div class="motto">"Belajar untuk menjadi bermanfaat."</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card santri-card p-3">
+                <div class="card-body text-center">
+                  <img src="img/santri9.jpg" class="img-fluid rounded-circle mb-3" style="width:100px;height:100px;object-fit:cover;" alt="Santri 9">
+                  <div class="santri-name">Ahmad Aminah</div>
+                  <div>Jenjang: MA</div>
+                  <div class="motto">"Rajin belajar, raih keberkahan."</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card santri-card p-3">
+                <div class="card-body text-center">
+                  <img src="img/santri10.jpg" class="img-fluid rounded-circle mb-3" style="width:100px;height:100px;object-fit:cover;" alt="Santri 10">
+                  <div class="santri-name">Rina Wulandari</div>
+                  <div>Jenjang: MTs</div>
+                  <div class="motto">"Berakhlak mulia, hidup bahagia."</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Tambah Slide 2, 3, dst. sesuai kebutuhan -->
-
-    </div>
-
-    <!-- Navigasi Carousel -->
-    <div class="d-flex justify-content-center mt-4 gap-3">
-      <button class="btn btn-dark rounded-circle" type="button" data-bs-target="#kongkowCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+      <!-- Carousel Control -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselSantri" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-success rounded-circle p-2"></span>
+        <span class="visually-hidden">Sebelumnya</span>
       </button>
-      <button class="btn btn-dark rounded-circle" type="button" data-bs-target="#kongkowCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselSantri" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-success rounded-circle p-2"></span>
+        <span class="visually-hidden">Berikutnya</span>
       </button>
     </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </main>
+</main>
+
+
 
   <!-- Footer -->
   <footer>
