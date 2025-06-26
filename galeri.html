@@ -201,67 +201,64 @@ footer {
   </div>
 </div>
   <!-- Konten Utama -->
-   <main>
-    
-   </main>
-   <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const navbarHeight = document.querySelector(".navbar").offsetHeight;
-    document.querySelector("main").style.paddingTop = navbarHeight + 30 + "px";
-  });
-</script>
-   <main class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
-  <div id="carouselExampleControls" class="carousel slide position-relative w-100" data-bs-ride="carousel">
-    <div class="carousel-inner container px-4">
-
-      <div class="carousel-item active">
-        <div class="card mx-auto" style="max-width: 700px; width: 100%;">
-          <div class="card-body">
-            <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="carousel-item">
-  <div class="card mx-auto" style="max-width: 700px; width: 100%;">
-    <div class="card-body">
-      <h5 class="card-title">IDUL ADHA ALL TIME</h5>
-      <p class="card-text">Berisi semua drive dokumen acara idul adha tahun ke tahun.</p>
-      <a href="https://drive.google.com/drive/folders/1z5lwJlQMRKUl-im7QP_M9tn6TsrBS4nX?usp=sharing" target="_blank" class="btn btn-primary">Dokum1 2025</a>
-      <a href="https://drive.google.com/drive/folders/1X1afbO-N0hAHIpWrTGZhRFKwbFj7Og-h?usp=sharing" target="_blank" class="btn btn-primary">Dokum2 2025</a>
-    </div>
-  </div>
-</div>
-
-
-      <div class="carousel-item">
-        <div class="card mx-auto" style="max-width: 700px; width: 100%;">
-          <div class="card-body">
-            <h5 class="card-title">Final Slide</h5>
-            <p class="card-text">Something cool to show here too.</p>
-            <a href="#" class="btn btn-primary">Details</a>
-          </div>
-        </div>
-      </div>
-
+   <main class="bg-white min-vh-100 pt-5">
+  <div class="container py-5">
+    <div class="text-center mb-5">
+      <h2 class="text-success fw-bold">📁 Dokumentasi Kegiatan</h2>
+      <p class="text-muted">Beberapa dokumentasi penting dari kegiatan yang telah kami laksanakan.</p>
     </div>
 
-    <!-- Tombol Navigasi (Berwarna Hitam dan Tidak Mengganggu Konten) -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev" style="left: 10px;">
-      <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
 
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next" style="right: 10px;">
-      <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="card mx-auto shadow border-0 bg-success-subtle" style="max-width: 700px;">
+            <div class="card-body text-center">
+              <h5 class="card-title text-success">✨ IDUL ADHA ALL TIME</h5>
+              <p class="card-text">Drive berisi seluruh dokumen acara Idul Adha dari tahun ke tahun.</p>
+              <a href="https://drive.google.com/drive/folders/1z5lwJlQMRKUl-im7QP_M9tn6TsrBS4nX?usp=sharing" target="_blank" class="btn btn-success m-1">Dokum 1 - 2025</a>
+              <a href="https://drive.google.com/drive/folders/1X1afbO-N0hAHIpWrTGZhRFKwbFj7Og-h?usp=sharing" target="_blank" class="btn btn-success m-1">Dokum 2 - 2025</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="card mx-auto shadow border-0 bg-success-subtle" style="max-width: 700px;">
+            <div class="card-body text-center">
+              <h5 class="card-title text-success">📸 Special Event</h5>
+              <p class="card-text">Cuplikan dokumentasi kegiatan spesial lainnya.</p>
+              <a href="#" class="btn btn-outline-success disabled">Belum tersedia</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="card mx-auto shadow border-0 bg-success-subtle" style="max-width: 700px;">
+            <div class="card-body text-center">
+              <h5 class="card-title text-success">📝 Final Slide</h5>
+              <p class="card-text">Halaman dokumentasi akan terus diperbarui seiring waktu.</p>
+              <a href="#" class="btn btn-success">Lihat Lainnya</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigasi -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-success rounded-circle p-2" aria-hidden="true"></span>
+        <span class="visually-hidden">Sebelumnya</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-success rounded-circle p-2" aria-hidden="true"></span>
+        <span class="visually-hidden">Berikutnya</span>
+      </button>
+    </div>
   </div>
 </main>
-
-
 
   <!-- Footer -->
   <footer>
